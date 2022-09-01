@@ -15,12 +15,13 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
-app.use('/api/goals', require('./routes/goalRoutes'))
-app.use('/api/users', require('./routes/userRoutes'))
-
 app.get('/', (req, res) => {
 	res.send('Hello Goal Setter App.')
 })
+
+app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+
 
 // Serve front-end
 /*
