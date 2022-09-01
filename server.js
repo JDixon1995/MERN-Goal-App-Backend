@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 })
 
 // Serve front-end
+/*
 if(process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, '../front-end/build')))
 
@@ -32,7 +33,7 @@ if(process.env.NODE_ENV === 'production') {
 } else {
 	app.get('/', (req, res) => res.send('Please set to production.'))
 }
-
+*/
 app.use(errorHandler)
 
 app.listen(port, () => {
