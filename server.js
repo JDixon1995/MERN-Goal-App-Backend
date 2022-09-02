@@ -11,7 +11,11 @@ connectDB()
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: "https://jdixon1995.github.io/MERN-Goal-App-Front-End/",
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
